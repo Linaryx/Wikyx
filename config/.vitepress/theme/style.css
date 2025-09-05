@@ -1,0 +1,666 @@
+/**
+ * Кастомные стили для VitePress
+ * Customize default theme styling by overriding CSS variables:
+ * https://github.com/vuejs/vitepress/blob/main/src/client/theme-default/styles/vars.css
+ */
+
+/* Подключение кастомного шрифта TT Travels Next Trial */
+/* Используем отдельные файлы шрифтов вместо вариативного шрифта */
+
+/* Thin - 100 */
+@font-face {
+  font-family: 'TT Travels Next Trial';
+  src: url('/fonts/TT Travels Next Trial Thin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ExtraLight - 200 */
+@font-face {
+  font-family: 'TT Travels Next Trial';
+  src: url('/fonts/TT Travels Next Trial ExtraLight.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Light - 300 */
+@font-face {
+  font-family: 'TT Travels Next Trial';
+  src: url('/fonts/TT Travels Next Trial Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Regular - 400 */
+@font-face {
+  font-family: 'TT Travels Next Trial';
+  src: url('/fonts/TT Travels Next Trial Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Medium - 500 */
+@font-face {
+  font-family: 'TT Travels Next Trial';
+  src: url('/fonts/TT Travels Next Trial Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* DemiBold - 600 */
+@font-face {
+  font-family: 'TT Travels Next Trial';
+  src: url('/fonts/TT Travels Next Trial DemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Bold - 700 */
+@font-face {
+  font-family: 'TT Travels Next Trial';
+  src: url('/fonts/TT Travels Next Trial Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ExtraBold - 800 */
+@font-face {
+  font-family: 'TT Travels Next Trial';
+  src: url('/fonts/TT Travels Next Trial ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Black - 900 */
+@font-face {
+  font-family: 'TT Travels Next Trial';
+  src: url('/fonts/TT Travels Next Trial Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Italic versions */
+/* Thin Italic - 100 */
+@font-face {
+  font-family: 'TT Travels Next Trial';
+  src: url('/fonts/TT Travels Next Trial Thin Italic.ttf') format('truetype');
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* ExtraLight Italic - 200 */
+@font-face {
+  font-family: 'TT Travels Next Trial';
+  src: url('/fonts/TT Travels Next Trial ExtraLight Italic.ttf') format('truetype');
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Light Italic - 300 */
+@font-face {
+  font-family: 'TT Travels Next Trial';
+  src: url('/fonts/TT Travels Next Trial Light Italic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Regular Italic - 400 */
+@font-face {
+  font-family: 'TT Travels Next Trial';
+  src: url('/fonts/TT Travels Next Trial Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Medium Italic - 500 */
+@font-face {
+  font-family: 'TT Travels Next Trial';
+  src: url('/fonts/TT Travels Next Trial Medium Italic.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* DemiBold Italic - 600 */
+@font-face {
+  font-family: 'TT Travels Next Trial';
+  src: url('/fonts/TT Travels Next Trial DemiBold Italic.ttf') format('truetype');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Bold Italic - 700 */
+@font-face {
+  font-family: 'TT Travels Next Trial';
+  src: url('/fonts/TT Travels Next Trial Bold Italic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* ExtraBold Italic - 800 */
+@font-face {
+  font-family: 'TT Travels Next Trial';
+  src: url('/fonts/TT Travels Next Trial ExtraBold Italic.ttf') format('truetype');
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Black Italic - 900 */
+@font-face {
+  font-family: 'TT Travels Next Trial';
+  src: url('/fonts/TT Travels Next Trial Black Italic.ttf') format('truetype');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+/**
+ * Colors
+ *
+ * Each colors have exact same color scale system with 3 levels of solid
+ * colors with different brightness, and 1 soft color.
+ * 
+ * - `XXX-1`: The most solid color used mainly for colored text. It must
+ *   satisfy the contrast ratio against when used on top of `XXX-soft`.
+ *
+ * - `XXX-2`: The color used mainly for hover state of the button.
+ *
+ * - `XXX-3`: The color for solid background, such as bg color of the button.
+ *   It must satisfy the contrast ratio with pure white (#ffffff) text on
+ *   top of it.
+ *
+ * - `XXX-soft`: The color used for subtle background such as custom container
+ *   or badges. It must satisfy the contrast ratio when putting `XXX-1` colors
+ *   on top of it.
+ *
+ *   The soft color must be semi transparent alpha channel. This is crucial
+ *   because it allows adding multiple "soft" colors on top of each other
+ *   to create a accent, such as when having inline code block inside
+ *   custom containers.
+ *
+ * - `default`: The color used purely for subtle indication without any
+ *   special meanings attched to it such as bg color for menu hover state.
+ *
+ * - `brand`: Used for primary brand colors, such as link text, button with
+ *   brand theme, etc.
+ *
+ * - `tip`: Used to indicate useful information. The default theme uses the
+ *   brand color for this by default.
+ *
+ * - `warning`: Used to indicate warning to the users. Used in custom
+ *   container, badges, etc.
+ *
+ * - `danger`: Used to indicate dangerous message to the users. Used in custom
+ *   container, badges, etc.
+ * -------------------------------------------------------------------------- */
+
+:root {
+  /* Шрифты - только Bounded и Montserrat */
+  --vp-font-family-base: 'Montserrat', sans-serif;
+  --vp-font-family-mono: 'Montserrat', monospace; /* Используем Montserrat вместо Fira Code */
+  
+  /* Брендинг */
+  --vp-c-brand-1: #646cff;
+  --vp-c-brand-2: #747bff;
+  --vp-c-brand-3: #535bf2;
+  --vp-c-brand-soft: rgba(100, 108, 255, 0.14);
+  
+  /* Кастомные переменные */
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #bd34fe 30%, #41d1ff);
+}
+
+/**
+ * Component: Button
+ * -------------------------------------------------------------------------- */
+
+:root {
+  --vp-button-brand-border: transparent;
+  --vp-button-brand-text: var(--vp-c-white);
+  --vp-button-brand-bg: var(--vp-c-brand-3);
+  --vp-button-brand-hover-border: transparent;
+  --vp-button-brand-hover-text: var(--vp-c-white);
+  --vp-button-brand-hover-bg: var(--vp-c-brand-2);
+  --vp-button-brand-active-border: transparent;
+  --vp-button-brand-active-text: var(--vp-c-white);
+  --vp-button-brand-active-bg: var(--vp-c-brand-1);
+}
+
+/**
+ * Component: Home
+ * -------------------------------------------------------------------------- */
+
+:root {
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #bd34fe 30%, #41d1ff);
+
+  --vp-home-hero-image-background-image: linear-gradient(-45deg, #bd34fe 50%, #47caff 50%);
+  --vp-home-hero-image-filter: blur(44px);
+}
+
+@media (min-width: 640px) {
+  :root {
+    --vp-home-hero-image-filter: blur(56px);
+  }
+}
+
+@media (min-width: 960px) {
+  :root {
+    --vp-home-hero-image-filter: blur(68px);
+  }
+}
+
+/**
+ * Component: Custom Block
+ * -------------------------------------------------------------------------- */
+
+:root {
+  --vp-custom-block-tip-border: transparent;
+  --vp-custom-block-tip-text: var(--vp-c-text-1);
+  --vp-custom-block-tip-bg: var(--vp-c-brand-soft);
+  --vp-custom-block-tip-code-bg: var(--vp-c-brand-soft);
+}
+
+/**
+ * Component: Algolia
+ * -------------------------------------------------------------------------- */
+
+.DocSearch {
+  --docsearch-primary-color: var(--vp-c-brand-1) !important;
+}
+
+/* Кастомные стили для заголовков */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'TT Travels Next Trial', 'Montserrat', sans-serif;
+  font-weight: 700 !important; /* Принудительно устанавливаем bold */
+}
+
+/* Отдельные настройки для разных уровней заголовков */
+h1 {
+  font-weight: 900 !important; /* Black */
+}
+
+h2 {
+  font-weight: 800 !important; /* ExtraBold */
+}
+
+h3 {
+  font-weight: 700 !important; /* Bold */
+}
+
+h4 {
+  font-weight: 600 !important; /* DemiBold */
+}
+
+h5 {
+  font-weight: 500 !important; /* Medium */
+  font-size: 0.9em;
+}
+
+h6 {
+  font-weight: 400 !important; /* Regular */
+  font-size: 0.85em;
+  opacity: 0.8;
+}
+
+/* Обеспечиваем использование только TT Travels Next Trial и Montserrat */
+body, 
+.vp-doc,
+.vp-nav,
+.vp-sidebar,
+p, 
+span, 
+div, 
+a, 
+button,
+input,
+textarea {
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+/* Код блоки - используем Montserrat вместо моноширинных шрифтов */
+code,
+pre,
+.vp-code,
+.language-bash,
+.language-js,
+.language-typescript,
+.language-css,
+.language-html {
+  font-family: 'Montserrat', monospace !important;
+  font-weight: 500;
+}
+
+/* Переопределяем все возможные шрифтовые стеки */
+* {
+  font-family: inherit;
+}
+
+/* Дополнительные кастомные стили */
+
+/* Стили для карточек на главной странице */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.video-card {
+  background: var(--vp-c-bg-soft);
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.video-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--vp-c-brand-1), var(--vp-c-brand-2));
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.video-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  border-color: var(--vp-c-brand-soft);
+}
+
+.video-card:hover::before {
+  transform: scaleX(1);
+}
+
+.video-card h3 {
+  color: var(--vp-c-brand-1);
+  margin: 0 0 0.75rem 0;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.video-card p {
+  margin: 0;
+  color: var(--vp-c-text-2);
+  line-height: 1.6;
+}
+
+/* Улучшенные стили для списков */
+.vp-doc ul li {
+  margin: 0.5rem 0;
+}
+
+.vp-doc ul li::marker {
+  color: var(--vp-c-brand-1);
+}
+
+/* Стили для таблиц */
+.vp-doc table {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.vp-doc table th {
+  background: var(--vp-c-brand-soft);
+  color: var(--vp-c-brand-1);
+  font-weight: 600;
+}
+
+.vp-doc table tr:hover {
+  background: var(--vp-c-bg-soft);
+}
+
+/* Кастомные блоки */
+.custom-info {
+  background: linear-gradient(135deg, var(--vp-c-brand-soft) 0%, transparent 100%);
+  border-left: 4px solid var(--vp-c-brand-1);
+  padding: 1rem 1.5rem;
+  border-radius: 0 8px 8px 0;
+  margin: 1rem 0;
+}
+
+.custom-warning {
+  background: linear-gradient(135deg, rgba(255, 193, 7, 0.1) 0%, transparent 100%);
+  border-left: 4px solid #ffc107;
+  padding: 1rem 1.5rem;
+  border-radius: 0 8px 8px 0;
+  margin: 1rem 0;
+}
+
+/* Стили для эмодзи */
+.emoji {
+  font-size: 1.2em;
+  margin-right: 0.5rem;
+}
+
+/* Анимация для кнопок */
+.vp-button {
+  transition: all 0.3s ease;
+}
+
+.vp-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Улучшенные ссылки */
+.vp-doc a {
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom-color 0.3s ease;
+}
+
+.vp-doc a:hover {
+  border-bottom-color: var(--vp-c-brand-1);
+}
+
+/* Респонсивность */
+@media (max-width: 768px) {
+  .video-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .video-card {
+    padding: 1rem;
+  }
+}
+
+/* Дополнительные классы для TT Travels Next Trial с разными весами */
+.tt-font-light,
+.vp-doc .tt-font-light,
+div.tt-font-light {
+  font-family: 'TT Travels Next Trial', sans-serif !important;
+  font-weight: 300 !important;
+}
+
+.tt-font-regular,
+.vp-doc .tt-font-regular,
+div.tt-font-regular {
+  font-family: 'TT Travels Next Trial', sans-serif !important;
+  font-weight: 400 !important;
+}
+
+.tt-font-medium,
+.vp-doc .tt-font-medium,
+div.tt-font-medium {
+  font-family: 'TT Travels Next Trial', sans-serif !important;
+  font-weight: 500 !important;
+}
+
+.tt-font-bold,
+.vp-doc .tt-font-bold,
+div.tt-font-bold {
+  font-family: 'TT Travels Next Trial', sans-serif !important;
+  font-weight: 700 !important;
+}
+
+.tt-font-black,
+.vp-doc .tt-font-black,
+div.tt-font-black {
+  font-family: 'TT Travels Next Trial', sans-serif !important;
+  font-weight: 900 !important;
+}
+
+/* Проверка шрифта - этот класс поможет протестировать шрифт */
+.font-test {
+  font-family: 'TT Travels Next Trial', sans-serif !important;
+  font-size: 2em;
+  line-height: 1.2;
+}
+
+.font-test-100 { 
+  font-family: 'TT Travels Next Trial', sans-serif !important;
+  font-weight: 100 !important; 
+}
+.font-test-200 { 
+  font-family: 'TT Travels Next Trial', sans-serif !important;
+  font-weight: 200 !important; 
+}
+.font-test-300 { 
+  font-family: 'TT Travels Next Trial', sans-serif !important;
+  font-weight: 300 !important; 
+}
+.font-test-400 { 
+  font-family: 'TT Travels Next Trial', sans-serif !important;
+  font-weight: 400 !important; 
+}
+.font-test-500 { 
+  font-family: 'TT Travels Next Trial', sans-serif !important;
+  font-weight: 500 !important; 
+}
+.font-test-600 { 
+  font-family: 'TT Travels Next Trial', sans-serif !important;
+  font-weight: 600 !important; 
+}
+.font-test-700 { 
+  font-family: 'TT Travels Next Trial', sans-serif !important;
+  font-weight: 700 !important; 
+}
+.font-test-800 { 
+  font-family: 'TT Travels Next Trial', sans-serif !important;
+  font-weight: 800 !important; 
+}
+.font-test-900 { 
+  font-family: 'TT Travels Next Trial', sans-serif !important;
+  font-weight: 900 !important; 
+}
+
+/* Дополнительные правила для принудительного применения TT Travels Next Trial */
+.font-test div,
+.font-test > div,
+.font-test [class*="font-test-"] {
+  font-family: 'TT Travels Next Trial', sans-serif !important;
+}
+
+/* Переопределяем любые Montserrat в тестовой секции */
+.font-test * {
+  font-family: inherit !important;
+}
+
+/* Дополнительные правила для принудительного применения шрифта */
+.vp-doc h1,
+.vp-doc h2,
+.vp-doc h3,
+.vp-doc h4,
+.vp-doc h5,
+.vp-doc h6,
+.VPHero .name,
+.VPHero .text {
+  font-family: 'TT Travels Next Trial', 'Montserrat', sans-serif !important;
+}
+
+
+
+/* Кастомизация логотипа в шапке - только иконка */
+.VPNavBarTitle {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  position: relative !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+}
+
+.VPNavBarTitle a {
+  display: block !important;
+  width: 32px !important;
+  height: 32px !important;
+  background-image: url('/favicon.ico') !important;
+  background-size: 32px 32px !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  border-radius: 6px !important;
+  transition: all 0.3s ease !important;
+  cursor: pointer !important;
+  text-indent: -9999px !important;
+  overflow: hidden !important;
+  text-decoration: none !important;
+}
+
+.VPNavBarTitle a:hover {
+  transform: rotate(5deg) scale(1.1) !important;
+}
+
+/* Скрываем текст логотипа */
+.VPNavBarTitle .title,
+.VPNavBarTitle .site-name,
+.VPNavBarTitle .site-title,
+.VPNavBarTitle .brand,
+.VPNavBarTitle .logo-text,
+.VPNavBarTitle .text,
+.VPNavBarTitle .name,
+.VPNavBarTitle span {
+  display: none !important;
+  font-size: 0 !important;
+  color: transparent !important;
+  text-indent: -9999px !important;
+  overflow: hidden !important;
+}
+
+/* Альтернативные селекторы для логотипа */
+.VPNavBar .VPNavBarTitle,
+.VPNavBar .VPNavBarTitle a,
+.VPNavBar .VPNavBarTitle .title {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+.VPNavBar .VPNavBarTitle a {
+  background-image: url('/favicon.ico') !important;
+  background-size: 32px 32px !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  width: 32px !important;
+  height: 32px !important;
+  border-radius: 6px !important;
+  text-indent: -9999px !important;
+  overflow: hidden !important;
+}
+

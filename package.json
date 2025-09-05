@@ -1,0 +1,19 @@
+{
+  "name": "wiki",
+  "version": "1.0.0",
+  "description": "wiki website",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vitepress dev config --host",
+    "build": "vitepress build config",
+    "start": "vitepress preview config --host"
+  },
+  "keywords": [],
+  "author": "Linaryx",
+  "license": "MIT",
+  "type": "commonjs",
+  "devDependencies": {
+    "@types/node": "^24.3.0",
+    "vitepress": "^1.6.4"
+  }
+}
