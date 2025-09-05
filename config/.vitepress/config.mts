@@ -7,8 +7,6 @@ export default defineConfig({
   description: "Спидранит всё, начиная с игр и заканчивая сквадами на твиче. Снимает интересные видео по майнкрафту и стримит на Twitch и YouTube",
   
   themeConfig: {
-    logo: '/img/LogoDark.png',
-    // https://vitepress.dev/reference/default-theme-config
     siteTitle: 'Заквиель',
     
     nav: [
