@@ -664,3 +664,15 @@ div.tt-font-black {
   overflow: hidden !important;
 }
 
+/* Скрываем заголовки у кастомных блоков */
+.vp-doc .custom-block .custom-block-title {
+  display: none !important;
+}
+
+.vp-doc .custom-block.tip .custom-block-title,
+.vp-doc .custom-block.warning .custom-block-title,
+.vp-doc .custom-block.danger .custom-block-title,
+.vp-doc .custom-block.info .custom-block-title {
+  display: none !important;
+}
+
