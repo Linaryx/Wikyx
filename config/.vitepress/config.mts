@@ -31,6 +31,13 @@ export default defineConfig({
             { text: 'Markdown', link: '/markdown-examples' },
             { text: 'API Examples', link: '/api-examples' }
           ]
+        },
+        {
+          text: 'Гайды',
+          items: [
+            { text: 'Оглавление', link: '/guides' },
+            { text: 'Как включить смайлы на Twitch', link: '/emotesGuide' }
+          ]
         }
       ]
     },
