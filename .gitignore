@@ -2,10 +2,9 @@
 node_modules/
 
 # VitePress build & cache
-/.vitepress/
 config/.vitepress/dist/
 config/.vitepress/cache/
-config/.vitepress/config.mts
+!/config/.vitepress/config.mts
 
 # Logs
 npm-debug.log*
