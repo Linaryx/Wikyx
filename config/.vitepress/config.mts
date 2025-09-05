@@ -11,8 +11,9 @@ export default defineConfig({
     
     nav: [
       { text: 'Главная', link: '/' },
+      { text: 'Гайды', link: '/guides' },
       {
-        text: 'Тесты',
+        text: 'for dev',
         items: [
           { text: 'Тест шрифта', link: '/font-test' },
           { text: 'Markdown', link: '/markdown-examples' },
@@ -24,7 +25,7 @@ export default defineConfig({
     sidebar: {
       '/': [
         {
-          text: 'Тесты',
+          text: 'for dev',
           items: [
             { text: 'Тест шрифта', link: '/font-test' },
             { text: 'Markdown', link: '/markdown-examples' },
