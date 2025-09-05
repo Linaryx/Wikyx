@@ -11,15 +11,20 @@ export default defineConfig({
     
     nav: [
       { text: 'Главная', link: '/' },
-      { text: 'Тест шрифта', link: '/font-test' },
-      { text: 'Markdown', link: '/markdown-examples' },
-      { text: 'API Examples', link: '/api-examples' }
+      {
+        text: 'Тесты',
+        items: [
+          { text: 'Тест шрифта', link: '/font-test' },
+          { text: 'Markdown', link: '/markdown-examples' },
+          { text: 'API Examples', link: '/api-examples' }
+        ]
+      }
     ],
 
     sidebar: {
       '/': [
         {
-          text: 'Тест шрифта',
+          text: 'Тесты',
           items: [
             { text: 'Тест шрифта', link: '/font-test' },
             { text: 'Markdown', link: '/markdown-examples' },
