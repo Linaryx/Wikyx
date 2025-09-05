@@ -52,7 +52,7 @@ export default defineConfig({
     ['meta', { name: 'og:locale', content: 'ru_RU' }],
     ['meta', { name: 'og:title', content: 'Заквиель - Стример и Ютубер' }],
     ['meta', { name: 'og:site_name', content: 'Заквиель Wiki' }],
-    ['meta', { name: 'og:image', content: '/Wikyx/og-image.jpg' }],
+    ['meta', { name: 'og:image', content: '/Wikyx/img/LogoDark.png' }],
     ['meta', { name: 'og:url', content: 'https://zakviel.wiki/' }],
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
     ['meta', { name: 'twitter:title', content: 'Заквиель - Стример и Ютубер' }],
