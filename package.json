@@ -11,7 +11,7 @@
   "keywords": [],
   "author": "Linaryx",
   "license": "MIT",
-  "type": "commonjs",
+  "type": "module",
   "devDependencies": {
     "@types/node": "^24.3.0",
     "vitepress": "^1.6.4"
