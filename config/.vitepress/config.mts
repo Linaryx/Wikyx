@@ -11,27 +11,11 @@ export default defineConfig({
     
     nav: [
       { text: 'Главная', link: '/' },
-      { text: 'Гайды', link: '/guides' },
-      {
-        text: 'for dev',
-        items: [
-          { text: 'Тест шрифта', link: '/font-test' },
-          { text: 'Markdown', link: '/markdown-examples' },
-          { text: 'API Examples', link: '/api-examples' }
-        ]
-      }
+      { text: 'Гайды', link: '/guides' }
     ],
 
     sidebar: {
       '/': [
-        {
-          text: 'for dev',
-          items: [
-            { text: 'Тест шрифта', link: '/font-test' },
-            { text: 'Markdown', link: '/markdown-examples' },
-            { text: 'API Examples', link: '/api-examples' }
-          ]
-        },
         {
           text: 'Гайды',
           items: [
