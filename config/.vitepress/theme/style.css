@@ -4,16 +4,7 @@
  * https://github.com/vuejs/vitepress/blob/main/src/client/theme-default/styles/vars.css
  */
 
-/* Подключение кастомного шрифта Bounded */
-/* Используем вариативный шрифт */
-
-@font-face {
-  font-family: 'Bounded';
-  src: url('/fonts/Bounded-Variable.ttf') format('truetype');
-  font-weight: 100 900;
-  font-style: normal;
-  font-display: swap;
-}
+/* Используем шрифт Montserrat из Google Fonts (см. head в config.mts) */
 
 /**
  * Colors
@@ -56,7 +47,7 @@
  * -------------------------------------------------------------------------- */
 
 :root {
-  /* Шрифты - только Bounded и Montserrat */
+  /* Шрифты - используем Montserrat */
   --vp-font-family-base: 'Montserrat', sans-serif;
   --vp-font-family-mono: 'Montserrat', monospace; /* Используем Montserrat вместо Fira Code */
   
@@ -132,7 +123,7 @@
 
 /* Кастомные стили для заголовков */
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Bounded', 'Montserrat', sans-serif;
+  font-family: 'Manrope', 'Montserrat', sans-serif;
   font-weight: 700 !important; /* Принудительно устанавливаем bold */
 }
 
@@ -164,7 +155,7 @@ h6 {
   opacity: 0.8;
 }
 
-/* Обеспечиваем использование только TT Travels Next Trial и Montserrat */
+/* Обеспечиваем использование Montserrat */
 body, 
 .vp-doc,
 .vp-nav,
@@ -334,83 +325,83 @@ pre,
   }
 }
 
-/* Дополнительные классы для TT Travels Next Trial с разными весами */
+/* Дополнительные классы шрифта (Montserrat) с разными весами */
 .tt-font-light,
 .vp-doc .tt-font-light,
 div.tt-font-light {
-  font-family: 'Bounded', sans-serif !important;
+  font-family: 'Montserrat', sans-serif !important;
   font-weight: 300 !important;
 }
 
 .tt-font-regular,
 .vp-doc .tt-font-regular,
 div.tt-font-regular {
-  font-family: 'Bounded', sans-serif !important;
+  font-family: 'Montserrat', sans-serif !important;
   font-weight: 400 !important;
 }
 
 .tt-font-medium,
 .vp-doc .tt-font-medium,
 div.tt-font-medium {
-  font-family: 'Bounded', sans-serif !important;
+  font-family: 'Montserrat', sans-serif !important;
   font-weight: 500 !important;
 }
 
 .tt-font-bold,
 .vp-doc .tt-font-bold,
 div.tt-font-bold {
-  font-family: 'Bounded', sans-serif !important;
+  font-family: 'Montserrat', sans-serif !important;
   font-weight: 700 !important;
 }
 
 .tt-font-black,
 .vp-doc .tt-font-black,
 div.tt-font-black {
-  font-family: 'Bounded', sans-serif !important;
+  font-family: 'Montserrat', sans-serif !important;
   font-weight: 900 !important;
 }
 
 /* Проверка шрифта - этот класс поможет протестировать шрифт */
 .font-test {
-  font-family: 'Bounded', sans-serif !important;
+  font-family: 'Montserrat', sans-serif !important;
   font-size: 2em;
   line-height: 1.2;
 }
 
 .font-test-100 { 
-  font-family: 'Bounded', sans-serif !important;
+  font-family: 'Montserrat', sans-serif !important;
   font-weight: 100 !important; 
 }
 .font-test-200 { 
-  font-family: 'Bounded', sans-serif !important;
+  font-family: 'Montserrat', sans-serif !important;
   font-weight: 200 !important; 
 }
 .font-test-300 { 
-  font-family: 'Bounded', sans-serif !important;
+  font-family: 'Montserrat', sans-serif !important;
   font-weight: 300 !important; 
 }
 .font-test-400 { 
-  font-family: 'Bounded', sans-serif !important;
+  font-family: 'Montserrat', sans-serif !important;
   font-weight: 400 !important; 
 }
 .font-test-500 { 
-  font-family: 'Bounded', sans-serif !important;
+  font-family: 'Montserrat', sans-serif !important;
   font-weight: 500 !important; 
 }
 .font-test-600 { 
-  font-family: 'Bounded', sans-serif !important;
+  font-family: 'Montserrat', sans-serif !important;
   font-weight: 600 !important; 
 }
 .font-test-700 { 
-  font-family: 'Bounded', sans-serif !important;
+  font-family: 'Montserrat', sans-serif !important;
   font-weight: 700 !important; 
 }
 .font-test-800 { 
-  font-family: 'Bounded', sans-serif !important;
+  font-family: 'Montserrat', sans-serif !important;
   font-weight: 800 !important; 
 }
 .font-test-900 { 
-  font-family: 'Bounded', sans-serif !important;
+  font-family: 'Montserrat', sans-serif !important;
   font-weight: 900 !important; 
 }
 
@@ -418,7 +409,7 @@ div.tt-font-black {
 .font-test div,
 .font-test > div,
 .font-test [class*="font-test-"] {
-  font-family: 'Bounded', sans-serif !important;
+  font-family: 'Montserrat', sans-serif !important;
 }
 
 /* Переопределяем любые Montserrat в тестовой секции */
@@ -435,7 +426,7 @@ div.tt-font-black {
 .vp-doc h6,
 .VPHero .name,
 .VPHero .text {
-  font-family: 'Bounded', 'Montserrat', sans-serif !important;
+  font-family: 'Manrope', 'Montserrat', sans-serif !important;
 }
 
 
