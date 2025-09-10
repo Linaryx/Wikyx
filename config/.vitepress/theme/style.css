@@ -4,7 +4,14 @@
  * https://github.com/vuejs/vitepress/blob/main/src/client/theme-default/styles/vars.css
  */
 
-/* Используем шрифт Montserrat из Google Fonts (см. head в config.mts) */
+/* Используем шрифт Montserrat из Google Fonts (см. head в config.mts) и локальный Bounded для заголовков */
+@font-face {
+  font-family: 'Bounded';
+  src: url('/fonts/Bounded-Variable.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
 
 /**
  * Colors
@@ -51,15 +58,15 @@
   --vp-font-family-base: 'Montserrat', sans-serif;
   --vp-font-family-mono: 'Montserrat', monospace; /* Используем Montserrat вместо Fira Code */
   
-  /* Брендинг */
-  --vp-c-brand-1: #646cff;
-  --vp-c-brand-2: #747bff;
-  --vp-c-brand-3: #535bf2;
-  --vp-c-brand-soft: rgba(100, 108, 255, 0.14);
+  /* Брендинг - фиолетово-синяя схема */
+  --vp-c-brand-1: #8b5cf6;
+  --vp-c-brand-2: #a78bfa;
+  --vp-c-brand-3: #7c3aed;
+  --vp-c-brand-soft: rgba(139, 92, 246, 0.15);
   
   /* Кастомные переменные */
   --vp-home-hero-name-color: transparent;
-  --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #bd34fe 30%, #41d1ff);
+  --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #8b5cf6 30%, #3b82f6);
 }
 
 /**
@@ -86,8 +93,8 @@
   --vp-home-hero-name-color: transparent;
   --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #bd34fe 30%, #41d1ff);
 
-  --vp-home-hero-image-background-image: linear-gradient(-45deg, #bd34fe 50%, #47caff 50%);
-  --vp-home-hero-image-filter: blur(44px);
+  --vp-home-hero-image-background-image: linear-gradient(-45deg, #8b5cf6 50%, #3b82f6 50%);
+  --vp-home-hero-image-filter: none;
 }
 
 @media (min-width: 640px) {
@@ -123,7 +130,7 @@
 
 /* Кастомные стили для заголовков */
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Geist', 'Montserrat', sans-serif;
+  font-family: 'Bounded', 'Montserrat', sans-serif;
   font-weight: 700 !important; /* Принудительно устанавливаем bold */
 }
 
@@ -426,7 +433,32 @@ div.tt-font-black {
 .vp-doc h6,
 .VPHero .name,
 .VPHero .text {
-  font-family: 'Geist', 'Montserrat', sans-serif !important;
+  font-family: 'Bounded', 'Montserrat', sans-serif !important;
+}
+
+/* Увеличиваем размер логотипа в hero-секции */
+.VPHero .image {
+  width: 120px !important;
+  height: 120px !important;
+  background: none !important;
+  border-radius: 0 !important;
+}
+
+.VPHero .image img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Убираем фоновый элемент за логотипом */
+.VPHero .image::before {
+  display: none !important;
+}
+
+.VPHero .image::after {
+  display: none !important;
 }
 
 
@@ -510,5 +542,90 @@ div.tt-font-black {
 .vp-doc .custom-block.danger .custom-block-title,
 .vp-doc .custom-block.info .custom-block-title {
   display: none !important;
+}
+
+/* Стили для быстрых ссылок */
+.quick-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.quick-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.75rem;
+  padding: 2rem 1.5rem;
+  background: var(--vp-c-bg-soft);
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 16px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.quick-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--vp-c-brand-1), var(--vp-c-brand-2));
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.quick-link:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  border-color: var(--vp-c-brand-soft);
+}
+
+.quick-link:hover::before {
+  transform: scaleX(1);
+}
+
+.quick-link .emoji {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.quick-link .text {
+  font-weight: 700;
+  color: var(--vp-c-text-1);
+  font-size: 1.2rem;
+  font-family: 'Bounded', 'Montserrat', sans-serif;
+}
+
+.quick-link .desc {
+  color: var(--vp-c-text-2);
+  font-size: 0.9rem;
+  opacity: 0.8;
+  line-height: 1.4;
+}
+
+/* Адаптивность для быстрых ссылок */
+@media (max-width: 768px) {
+  .quick-links {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .quick-link {
+    padding: 1.5rem 1rem;
+  }
+  
+  .quick-link .emoji {
+    font-size: 2.5rem;
+  }
+  
+  .quick-link .text {
+    font-size: 1.1rem;
+  }
 }
 
