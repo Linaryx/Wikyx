@@ -5,6 +5,7 @@ export default defineConfig({
   title: "Заквиель",
   base: '/Wikyx/',
   description: "Спидранит всё, начиная с игр и заканчивая сквадами на твиче. Снимает интересные видео по майнкрафту и стримит на Twitch и YouTube",
+  cleanUrls: true,
   
   themeConfig: {
     siteTitle: 'Заквиель',
