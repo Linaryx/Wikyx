@@ -11,6 +11,7 @@ export default defineConfig({
     
     nav: [
       { text: 'Главная', link: '/' },
+      { text: 'Сборка', link: '/sborka' },
       { text: 'Гайды', link: '/guides' }
     ],
 
@@ -21,6 +22,12 @@ export default defineConfig({
           items: [
             { text: 'Оглавление', link: '/guides' },
             { text: 'Как включить смайлы на Twitch', link: '/emotesGuide' }
+          ]
+        },
+        {
+          text: 'Сборка',
+          items: [
+            { text: 'Fear Nightfall v1.1.3', link: '/sborka' }
           ]
         }
       ]

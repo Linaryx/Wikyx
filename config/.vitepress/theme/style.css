@@ -4,169 +4,14 @@
  * https://github.com/vuejs/vitepress/blob/main/src/client/theme-default/styles/vars.css
  */
 
-/* Подключение кастомного шрифта TT Travels Next Trial */
-/* Используем отдельные файлы шрифтов вместо вариативного шрифта */
+/* Подключение кастомного шрифта Bounded */
+/* Используем вариативный шрифт */
 
-/* Thin - 100 */
 @font-face {
-  font-family: 'TT Travels Next Trial';
-  src: url('/fonts/TT Travels Next Trial Thin.ttf') format('truetype');
-  font-weight: 100;
+  font-family: 'Bounded';
+  src: url('/fonts/Bounded-Variable.ttf') format('truetype');
+  font-weight: 100 900;
   font-style: normal;
-  font-display: swap;
-}
-
-/* ExtraLight - 200 */
-@font-face {
-  font-family: 'TT Travels Next Trial';
-  src: url('/fonts/TT Travels Next Trial ExtraLight.ttf') format('truetype');
-  font-weight: 200;
-  font-style: normal;
-  font-display: swap;
-}
-
-/* Light - 300 */
-@font-face {
-  font-family: 'TT Travels Next Trial';
-  src: url('/fonts/TT Travels Next Trial Light.ttf') format('truetype');
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-
-/* Regular - 400 */
-@font-face {
-  font-family: 'TT Travels Next Trial';
-  src: url('/fonts/TT Travels Next Trial Regular.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-/* Medium - 500 */
-@font-face {
-  font-family: 'TT Travels Next Trial';
-  src: url('/fonts/TT Travels Next Trial Medium.ttf') format('truetype');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-/* DemiBold - 600 */
-@font-face {
-  font-family: 'TT Travels Next Trial';
-  src: url('/fonts/TT Travels Next Trial DemiBold.ttf') format('truetype');
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-/* Bold - 700 */
-@font-face {
-  font-family: 'TT Travels Next Trial';
-  src: url('/fonts/TT Travels Next Trial Bold.ttf') format('truetype');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-/* ExtraBold - 800 */
-@font-face {
-  font-family: 'TT Travels Next Trial';
-  src: url('/fonts/TT Travels Next Trial ExtraBold.ttf') format('truetype');
-  font-weight: 800;
-  font-style: normal;
-  font-display: swap;
-}
-
-/* Black - 900 */
-@font-face {
-  font-family: 'TT Travels Next Trial';
-  src: url('/fonts/TT Travels Next Trial Black.ttf') format('truetype');
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
-}
-
-/* Italic versions */
-/* Thin Italic - 100 */
-@font-face {
-  font-family: 'TT Travels Next Trial';
-  src: url('/fonts/TT Travels Next Trial Thin Italic.ttf') format('truetype');
-  font-weight: 100;
-  font-style: italic;
-  font-display: swap;
-}
-
-/* ExtraLight Italic - 200 */
-@font-face {
-  font-family: 'TT Travels Next Trial';
-  src: url('/fonts/TT Travels Next Trial ExtraLight Italic.ttf') format('truetype');
-  font-weight: 200;
-  font-style: italic;
-  font-display: swap;
-}
-
-/* Light Italic - 300 */
-@font-face {
-  font-family: 'TT Travels Next Trial';
-  src: url('/fonts/TT Travels Next Trial Light Italic.ttf') format('truetype');
-  font-weight: 300;
-  font-style: italic;
-  font-display: swap;
-}
-
-/* Regular Italic - 400 */
-@font-face {
-  font-family: 'TT Travels Next Trial';
-  src: url('/fonts/TT Travels Next Trial Italic.ttf') format('truetype');
-  font-weight: 400;
-  font-style: italic;
-  font-display: swap;
-}
-
-/* Medium Italic - 500 */
-@font-face {
-  font-family: 'TT Travels Next Trial';
-  src: url('/fonts/TT Travels Next Trial Medium Italic.ttf') format('truetype');
-  font-weight: 500;
-  font-style: italic;
-  font-display: swap;
-}
-
-/* DemiBold Italic - 600 */
-@font-face {
-  font-family: 'TT Travels Next Trial';
-  src: url('/fonts/TT Travels Next Trial DemiBold Italic.ttf') format('truetype');
-  font-weight: 600;
-  font-style: italic;
-  font-display: swap;
-}
-
-/* Bold Italic - 700 */
-@font-face {
-  font-family: 'TT Travels Next Trial';
-  src: url('/fonts/TT Travels Next Trial Bold Italic.ttf') format('truetype');
-  font-weight: 700;
-  font-style: italic;
-  font-display: swap;
-}
-
-/* ExtraBold Italic - 800 */
-@font-face {
-  font-family: 'TT Travels Next Trial';
-  src: url('/fonts/TT Travels Next Trial ExtraBold Italic.ttf') format('truetype');
-  font-weight: 800;
-  font-style: italic;
-  font-display: swap;
-}
-
-/* Black Italic - 900 */
-@font-face {
-  font-family: 'TT Travels Next Trial';
-  src: url('/fonts/TT Travels Next Trial Black Italic.ttf') format('truetype');
-  font-weight: 900;
-  font-style: italic;
   font-display: swap;
 }
 
@@ -287,7 +132,7 @@
 
 /* Кастомные стили для заголовков */
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'TT Travels Next Trial', 'Montserrat', sans-serif;
+  font-family: 'Bounded', 'Montserrat', sans-serif;
   font-weight: 700 !important; /* Принудительно устанавливаем bold */
 }
 
@@ -493,79 +338,79 @@ pre,
 .tt-font-light,
 .vp-doc .tt-font-light,
 div.tt-font-light {
-  font-family: 'TT Travels Next Trial', sans-serif !important;
+  font-family: 'Bounded', sans-serif !important;
   font-weight: 300 !important;
 }
 
 .tt-font-regular,
 .vp-doc .tt-font-regular,
 div.tt-font-regular {
-  font-family: 'TT Travels Next Trial', sans-serif !important;
+  font-family: 'Bounded', sans-serif !important;
   font-weight: 400 !important;
 }
 
 .tt-font-medium,
 .vp-doc .tt-font-medium,
 div.tt-font-medium {
-  font-family: 'TT Travels Next Trial', sans-serif !important;
+  font-family: 'Bounded', sans-serif !important;
   font-weight: 500 !important;
 }
 
 .tt-font-bold,
 .vp-doc .tt-font-bold,
 div.tt-font-bold {
-  font-family: 'TT Travels Next Trial', sans-serif !important;
+  font-family: 'Bounded', sans-serif !important;
   font-weight: 700 !important;
 }
 
 .tt-font-black,
 .vp-doc .tt-font-black,
 div.tt-font-black {
-  font-family: 'TT Travels Next Trial', sans-serif !important;
+  font-family: 'Bounded', sans-serif !important;
   font-weight: 900 !important;
 }
 
 /* Проверка шрифта - этот класс поможет протестировать шрифт */
 .font-test {
-  font-family: 'TT Travels Next Trial', sans-serif !important;
+  font-family: 'Bounded', sans-serif !important;
   font-size: 2em;
   line-height: 1.2;
 }
 
 .font-test-100 { 
-  font-family: 'TT Travels Next Trial', sans-serif !important;
+  font-family: 'Bounded', sans-serif !important;
   font-weight: 100 !important; 
 }
 .font-test-200 { 
-  font-family: 'TT Travels Next Trial', sans-serif !important;
+  font-family: 'Bounded', sans-serif !important;
   font-weight: 200 !important; 
 }
 .font-test-300 { 
-  font-family: 'TT Travels Next Trial', sans-serif !important;
+  font-family: 'Bounded', sans-serif !important;
   font-weight: 300 !important; 
 }
 .font-test-400 { 
-  font-family: 'TT Travels Next Trial', sans-serif !important;
+  font-family: 'Bounded', sans-serif !important;
   font-weight: 400 !important; 
 }
 .font-test-500 { 
-  font-family: 'TT Travels Next Trial', sans-serif !important;
+  font-family: 'Bounded', sans-serif !important;
   font-weight: 500 !important; 
 }
 .font-test-600 { 
-  font-family: 'TT Travels Next Trial', sans-serif !important;
+  font-family: 'Bounded', sans-serif !important;
   font-weight: 600 !important; 
 }
 .font-test-700 { 
-  font-family: 'TT Travels Next Trial', sans-serif !important;
+  font-family: 'Bounded', sans-serif !important;
   font-weight: 700 !important; 
 }
 .font-test-800 { 
-  font-family: 'TT Travels Next Trial', sans-serif !important;
+  font-family: 'Bounded', sans-serif !important;
   font-weight: 800 !important; 
 }
 .font-test-900 { 
-  font-family: 'TT Travels Next Trial', sans-serif !important;
+  font-family: 'Bounded', sans-serif !important;
   font-weight: 900 !important; 
 }
 
@@ -573,7 +418,7 @@ div.tt-font-black {
 .font-test div,
 .font-test > div,
 .font-test [class*="font-test-"] {
-  font-family: 'TT Travels Next Trial', sans-serif !important;
+  font-family: 'Bounded', sans-serif !important;
 }
 
 /* Переопределяем любые Montserrat в тестовой секции */
@@ -590,7 +435,7 @@ div.tt-font-black {
 .vp-doc h6,
 .VPHero .name,
 .VPHero .text {
-  font-family: 'TT Travels Next Trial', 'Montserrat', sans-serif !important;
+  font-family: 'Bounded', 'Montserrat', sans-serif !important;
 }
 
 
