@@ -2,13 +2,13 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "Заквиель",
+  title: "Wikyx - вики чата",
   base: '/',
-  description: "Спидранит всё, начиная с игр и заканчивая сквадами на твиче. Снимает интересные видео по майнкрафту и стримит на Twitch и YouTube",
+  description: "Википедия чата Заквиеля",
   cleanUrls: true,
   
   themeConfig: {
-    siteTitle: 'Заквиель',
+    siteTitle: 'Wikyx - вики чата',
     
     nav: [
       { text: 'Главная', link: '/' },
