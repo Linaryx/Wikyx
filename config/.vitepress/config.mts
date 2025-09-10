@@ -57,15 +57,15 @@ export default defineConfig({
     ['meta', { name: 'og:locale', content: 'ru_RU' }],
     ['meta', { name: 'og:title', content: 'Заквиель - Стример и Ютубер' }],
     ['meta', { name: 'og:site_name', content: 'Заквиель Wiki' }],
-    ['meta', { name: 'og:image', content: '/Wikyx/img/LogoDark.png' }],
+    ['meta', { name: 'og:image', content: '/img/logo.webp' }],
     ['meta', { name: 'og:url', content: 'https://zakviel.wiki/' }],
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
     ['meta', { name: 'twitter:title', content: 'Заквиель - Стример и Ютубер' }],
     ['meta', { name: 'twitter:description', content: 'Спидранит всё, начиная с игр и заканчивая сквадами на твиче. Снимает интересные видео по майнкрафту и стримит на Twitch и YouTube' }],
     ['meta', { name: 'keywords', content: 'заквиель, zakviel, стример, ютубер, майнкрафт, спидран, twitch, youtube, игры' }],
-    ['link', { rel: 'icon', type: 'image/x-icon', href: '/Wikyx/favicon.ico' }],
-    ['link', { rel: 'shortcut icon', type: 'image/x-icon', href: '/Wikyx/favicon.ico' }],
-    ['link', { rel: 'apple-touch-icon', href: '/Wikyx/favicon.ico' }]
+    ['link', { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    ['link', { rel: 'shortcut icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    ['link', { rel: 'apple-touch-icon', href: '/favicon.ico' }]
   ],
 
   // Настройки генерации сайтмапы

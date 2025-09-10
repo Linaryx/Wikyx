@@ -63,7 +63,7 @@ const startAnimation = async () => {
   // Анимируем счётчики
   animateCounter(followers, twitchFollowers, 2000)
   setTimeout(() => {
-    animateCounter(guidesCount, 2, 1500)
+    animateCounter(guidesCount, 1, 1500)
   }, 500)
 }
 
